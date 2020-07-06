@@ -8,6 +8,7 @@ class App extends React.Component {
 
     this.state = {
       movies: moviesData,
+      moviesWillWatch: [],
     };
   }
 
@@ -19,12 +20,35 @@ class App extends React.Component {
     });
   };
 
+  addMovieToWillWatch = (movie) => {
+    const updateMoviesWillWatch = [...this.state.moviesWillWatch, movie];
+
+    this.setState({
+      moviesWillWatch: updateMoviesWillWatch,
+    });
+  };
+
   render() {
     return (
-      <div>
-        {this.state.movies.map((movie) => (
-          <MovieItem key={movie.id} movie={movie} removeMovie={this.removeMovie} />
-        ))}
+      <div className="container">
+        <div className="row">
+          <div className="col-9">
+            <div className="row">
+              {this.state.movies.map((movie) => (
+                <div className="col-6 mb-4" key={movie.id}>
+                  <MovieItem
+                    movie={movie}
+                    removeMovie={this.removeMovie}
+                    addMovieToWillWatch={this.addMovieToWillWatch}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="col-3">
+            <p>Will watch: {this.state.moviesWillWatch.length}</p>
+          </div>
+        </div>
       </div>
     );
   }
