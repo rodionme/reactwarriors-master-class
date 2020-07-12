@@ -1,0 +1,1 @@
+{"version":3,"sources":["C:\\aside\\reactwarriors-master-class/src\\stylesheets\\index.scss"],"names":[],"mappings":"AAAA,KACE,kBAAmB,CAGrB,UACE,cAAe,CADjB,gBAII,aAAc","file":"main.8de4a7c3.chunk.css","sourcesContent":["body {\n  background: #f9f9f9;\n}\n\n.nav-link {\n  cursor: pointer;\n\n  &:hover {\n    color: #007bff;\n  }\n}\n"]}
