@@ -2,7 +2,7 @@
   "name": "reactwarriors-master-class",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://rodionme.github.io/reactwarriors-master-class",
+  "homepage": "https://rodionme.github.io/reactwarriors-master-class",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
